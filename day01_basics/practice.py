@@ -26,5 +26,3 @@ print(type(age))
 print(type(height))
 print(type(learning_python))
 
-# Exercise D 
-

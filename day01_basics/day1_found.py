@@ -6,6 +6,7 @@ Author: Drawts
 Description: introduces Python’s fundamental building blocks, emphasizing descriptive variable naming and the use of core data types like integers, 
 strings, and booleans. It also demonstrates how to perform basic mathematical operations and output data to the console to verify program logic and results.
 
+
 """
 
 #  Core Concepts (read carefully)
@@ -45,3 +46,5 @@ full_name = name + " Smith"
 print("User name:", name)
 print("Age:", age)
 print("Is student:", is_student)
+
+# Take a knowledge quiz "Python Fundamentals: Core Concepts" here: https://gemini.google.com/share/9765aa424589
