@@ -1,0 +1,28 @@
+"""
+Day 08: Reflection (Taking a moment to think about this day)
+
+Author: Drawts
+
+Description: I'm gonna sincerely answer this question so I write down what I'm doing wrong and what needs to be done to get successful on this path.
+
+"""
+
+What logic mistake did you catch yourself making today?
+
+I was leaving certaing operations or conditions out of the code, which made me took more time than it was supposed to be, meaning I need to dedicate more hours
+to study or even read a few articles about python so I understand what is needed in each case, as well as review carefully the syntax error notes on the terminal
+which may help to figure out what am I missing. I had the same logic mistake today multiple times, that was the "return" in conditions if inside of a def, I almost
+forgot that each time we make a condition if defining a function we need to return what we want to output. I had some issues applying math to the code in part 3, 
+maybe I just need to keep going cause I'm gonna be learning more and more, I know that.
+
+What part felt uncomfortable?
+
+Well, sometimes I get uncomfortable because I don't know what to do or what is next step I need to take in order to get the code working properly, it frustrates me 
+a little, however I know I'm learning and that things are gonna get a lot easier through time to time. By the other hand, what literally made me uncomfortable was
+the things I said on the previous question, or sometimes I get frustrated because I don't know why calling the "def" gets so hard to call sometimes, I put everything
+needed to call the def but it just doesn't work, and I rewrite and rewrite and then work. As well as sometimes isn't needed to be called but I don't when not to call it (sometimes).
+
+What felt easier than expected?
+
+It is easier for me to create def and apply names to things like variables, parameteres, I feel comfortable using if conditions, "and, or, not" is a lot easier now
+I feel comfortable using strings and nesting codes, I feel like I'm learning but you know it is like I want more and more and more.
