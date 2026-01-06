@@ -1,0 +1,27 @@
+The  assignment (important)
+
+
+1 - Explain what this program is.
+
+2 - Explain what parts confuse the most
+
+3 - Explain which file owns the “truth” of the app
+
+
+Here we have : 
+
+A real CLI app
+
+Persistent storage
+
+Separation of concerns
+
+A service layer
+
+A repository layer
+
+Formatting logic
+
+Argument parsing
+
+State transitions
