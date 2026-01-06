@@ -70,9 +70,7 @@ def exit_program():
     print("Transaction finished. Goodbye!")
 
        
-def get_menu_options():
-    global balance
-    menu_options = ("1.", "2.", "3.", "4.", "5.")  
+def get_menu_options(balance):
     running = True
 
     while running:
@@ -86,20 +84,20 @@ def get_menu_options():
         print("5. = exit")
 
         print()
-        choice = input("Enter an option: ")
+        choice = input("Choose an option: ")
 
-        if choice == "1.":
+        if choice == "1":
             balance = deposit_transaction(balance)
             print(f"Deposit successful. New Balance: {balance}")
-        elif choice == "2.":
+        elif choice == "2":
             balance = withdraw_transaction(balance) 
             print(f"Withdraw successful. New balance: {balance}")
-        elif choice == "3.":
+        elif choice == "3":
             balance = transfer_transaction(balance)
             print(f"Transfer successful. New Balance: {balance}")
-        elif choice == "4.":
+        elif choice == "4":
             balance = chk_balance_transaction(balance)
-        elif choice == "5.":
+        elif choice == "5":
             exit_program()
             running = False
         else:
@@ -107,4 +105,4 @@ def get_menu_options():
             print("OPTION NOT AVAILABLE")
 
 
-get_menu_options()
+get_menu_options(balance)
