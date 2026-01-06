@@ -34,8 +34,6 @@ while True:
 
 def deposit_transaction(balance, deposit, amount):
 
-    deposit_amount = int("Enter amount to deposit: ")
-    user_option = user_input
 
     if user_option:
         return deposit_amount
