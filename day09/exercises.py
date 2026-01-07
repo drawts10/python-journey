@@ -51,6 +51,9 @@ def transfer(balance, amount):
         return balance, "Insufficient funds"
     return balance - amount, "Transfer successful"
 
+def check(balance):
+
+    print(f"Current Balance: ", balance)
 
 # Exercise 3 -- Action Dispatcher
 
@@ -58,8 +61,7 @@ ACTIONS = {
     "1": deposit,
     "2": withdraw,
     "3": transfer,
-    "4": exit,
-    "5": "check_balance"
+    "4": check
 }
 
 balance = 45000
@@ -71,18 +73,18 @@ while True:
     print("\n1. Deposit")
     print("2. Withdraw")
     print("3. Transfer")
-    print("4. Exit")
-    print("5. Check balance")
+    print("4. Check balance")
+    print("5. Exit")
 
     choice = input("\nChoose an option: ")
 
     if choice == "4":
-        print("Goodbye!")
-        break
-
-    if choice == "5":
         print(f"Current Balance: {balance}")
         continue
+
+    if choice == "5":
+        print("Goodbye!")
+        break
 
     if choice not in ACTIONS:
         print("Invalid option")

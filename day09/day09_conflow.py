@@ -7,6 +7,14 @@ Description: Implementing Command Dispatch to replace messy if/else chains with 
 Concerns by decoupling UI input from core mathematical logic. Building Robust Validation to ensure the program survives hostile user 
 input without crashing.
 
+Important action from this Day was:
+
+While loop
+try/except
+validation
+clean return
+
+It could be done with "No input", "No print", Logic and clear return values
 """
 
 # Concepts for Today
