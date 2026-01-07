@@ -28,8 +28,6 @@ if __name__ == "__main__":
 # Exercise 2 -- Logic Only Bank Functions
 
 def deposit(balance, amount):
-    balance = 1000
-    amount = int("Enter amount to deposit: ")
 
     if amount <= 0:
         return balance, "Invalid amount"
@@ -37,8 +35,6 @@ def deposit(balance, amount):
 
 
 def withdraw(balance, amount):
-    balance = 1000
-    amount = int("Enter amount to withdraw: ")
 
     if amount <= 0:
         return balance, "Invalid amount"
@@ -48,8 +44,6 @@ def withdraw(balance, amount):
 
 
 def transfer(balance, amount):
-    balance = 1000
-    amount = int("Enter amount to transfer: ")
 
     if amount <= 0:
         return balance, "Invalid amount"
@@ -57,12 +51,47 @@ def transfer(balance, amount):
         return balance, "Insufficient funds"
     return balance - amount, "Transfer successful"
 
+
 # Exercise 3 -- Action Dispatcher
 
 ACTIONS = {
     "1": deposit,
     "2": withdraw,
-    "3": transfer
+    "3": transfer,
+    "4": exit,
+    "5": "check_balance"
 }
 
-user_input = input(f"Choose an option: {ACTIONS}")
+balance = 45000
+
+while True:
+
+    print("\nOptions Available: ")
+
+    print("\n1. Deposit")
+    print("2. Withdraw")
+    print("3. Transfer")
+    print("4. Exit")
+    print("5. Check balance")
+
+    choice = input("\nChoose an option: ")
+
+    if choice == "4":
+        print("Goodbye!")
+        break
+
+    if choice == "5":
+        print(f"Current Balance: {balance}")
+        continue
+
+    if choice not in ACTIONS:
+        print("Invalid option")
+        continue
+
+    amount = int(input("Enter amount: "))
+
+    action = ACTIONS[choice]
+    balance, message = action(balance, amount)
+
+    print(message)
+    print("Current Balance: ", balance)
