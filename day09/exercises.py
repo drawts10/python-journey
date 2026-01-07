@@ -2,18 +2,27 @@
 # Exercise 1 -- Safe Integer Input
 
 def get_positive_int(prompt):
+    while True:
+        user_input = input(prompt)
+        try:
+            positive = int(user_input)
+        
+            if positive > 0:
+                return positive
+            else:
+                print("Error: Please enter a number greater than 0.")
 
-    user_input = input(prompt)
-    positive = int(user_input)
-
-    if positive > 0: 
-        return positive
-    else: 
-        print(f"{user_input} is an invalid intenger")
+        except ValueError:
+            print((f"Error: '{user_input}' is not a valid integer. Please try again!"))
     
-
-age = get_positive_int("Enter your age: ")
-print(f"Your {age} is valid")
+    
+if __name__ == "__main__":
+    print("Testing get_positive_int function...")
+    age = get_positive_int("Enter your age: ")
+    if age >= 18:
+        print("You are an adult")
+    else:
+        print("You are a minor")
 
 
 # Exercise 2 -- Logic Only Bank Functions
