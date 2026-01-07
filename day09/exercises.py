@@ -90,10 +90,17 @@ while True:
         print("Invalid option")
         continue
 
-    amount = int(input("Enter amount: "))
+    user_input = input("Enter amount: ")
 
-    action = ACTIONS[choice]
-    balance, message = action(balance, amount)
+    try:
 
-    print(message)
-    print("Current Balance: ", balance)
+        amount = int(user_input)
+        
+        action = ACTIONS[choice]
+        balance, message = action(balance, amount)
+
+        print(message)
+        print("Current Balance: ", balance)
+
+    except ValueError:
+        print(f"Error: {user_input} is not a valid number")
