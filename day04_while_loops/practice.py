@@ -1,7 +1,7 @@
 
 # Exercise A -- Countdown
 
-count = 5
+count = int(input("Enter a number: "))
 
 while count >= 0:
     print(count)
@@ -12,13 +12,17 @@ print("Done")
 
 # Exercise B -- Password Check
 
-password = "python1234"
-user_input = ""
+user_input = input("Enter user: ")
+password = input("Enter password: ")
+password_length = 8
 
-while user_input != password:
-    user_input = input("Enter password: ")
-
-print("Access granted")
+if len(password) < password_length:
+    print("Password should be longer", password_length = 8)
+else: 
+    while user_input != password:
+        print("Access granted")
+        break
+   
 
 
 # Exercise C -- Skip Number

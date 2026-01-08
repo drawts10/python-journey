@@ -1,0 +1,68 @@
+
+"""DOCUMENT OF IMPORTANT INFOMATION"""
+
+
+We should be familiar with two types of tools: Built-in Functions (used like func(value)) and String Methods (used like value.method()). 
+
+Here are the essential ones, categorized by how they help you process user input. 
+
+
+
+1. Information Functions 
+
+These give you data about your text without changing it. 
+
+.len(text): Returns the total number of characters, including spaces
+
+.type(value): Tells you if a variable is a string (str), integer (int), or float.
+
+.isdigit(): Returns True if the string contains only numbers.
+
+.isalpha(): Returns True if the string contains only letters. 
+
+
+
+2. Case Transformation Methods 
+
+These return a new copy of the string with different capitalization. 
+
+.upper(): Converts every letter to uppercase (e.g., "hello" \(\rightarrow \) "HELLO").
+
+.lower(): Converts every letter to lowercase (e.g., "HELLO" \(\rightarrow \) "hello").
+
+.capitalize(): Capitalizes only the very first letter and makes the rest lowercase.
+
+.title(): Capitalizes the first letter of every word (e.g., "hello world" \(\rightarrow \) "Hello World"). 
+
+
+
+3. Cleaning & Modifying Methods 
+
+Essential for making user input match your code's expectations. 
+
+.strip(): Removes whitespace (spaces, tabs, newlines) from both the beginning and the end.
+
+.replace("old", "new"): Swaps a specific part of the text with something else.
+
+.split(","): Breaks a string into a list of items based on a separator (like a comma). 
+
+
+
+4. Data Conversion Functions
+
+Since input() always returns a string, you often need these to perform math
+
+. int(value): Converts a string "10" into the actual number 10
+
+. float(value): Converts a string "10.5" into a decimal number
+
+. str(value): Converts a number 10 back into the string "10" (useful for combining text and numbers). 
+
+
+For example: 
+
+Quick Code Example pythonraw_input = "  python_PROG_2026  "
+
+clean_input = raw_input.strip().lower() # Results in "python_prog_2026"
+first_word = clean_input.split("_")[0]  # Results in "python"
+print(first_word.capitalize())           # Output: Python

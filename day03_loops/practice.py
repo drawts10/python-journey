@@ -1,7 +1,7 @@
 
 # Exercise A -- Print Numbers
 
-for i in range(1,11):
+for i in range(1,11,3):
     print(i)
 
 
@@ -11,7 +11,6 @@ names = ["Mike", "Ana", "Luis", "Sofia"]
 
 for name in names:
     print("Hello", name)
-
 
 # Exercise C -- Even Numbers Only
 
@@ -25,7 +24,7 @@ for number in numbers:
 # Exercise D -- Count 
 
 count = 0
-for i in range(10):
+for i in range(1,22,3):
     count += 1
 
 print("Final count:", count)

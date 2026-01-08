@@ -13,7 +13,7 @@ print(learning_python)
 
 # Exercise B 
 
-birth_year = 2000
+birth_year = int(input("What is your birth year?: "))
 current_year = 2026
 
 age = current_year - birth_year
@@ -25,4 +25,3 @@ print(type(name))
 print(type(age))
 print(type(height))
 print(type(learning_python))
-

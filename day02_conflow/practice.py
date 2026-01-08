@@ -1,7 +1,7 @@
 
 # Exercise A -- Age Classification
 
-age = 66
+age = int(input("Enter your age: "))
 
 if age < 12:
     print("Your are a child")
@@ -15,7 +15,7 @@ else:
 
 # Exercise B -- Number Check
 
-number = 100
+number = int(input("Enter a number: "))
 
 if number % 2 == 0:
     print("Even number")
@@ -25,10 +25,10 @@ else:
 
 # Exercise C -- Simple Access Rule
 
-have_id = True
-age = 25
+have_id = input("Do you have id? (yes/no): ").lower().strip()
+age = int(input("Enter your age: "))
 
-if have_id and age >= 18:
+if have_id == "yes" and age >= 18:
     print("Access granted")
 else: 
     print("Access denied")
