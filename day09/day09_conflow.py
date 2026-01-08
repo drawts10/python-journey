@@ -13,6 +13,7 @@ While loop
 try/except
 validation
 clean return
+Correct use of def (prompt)
 
 It could be done with "No input", "No print", Logic and clear return values
 """
