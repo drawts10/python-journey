@@ -31,7 +31,7 @@ def deposit(balance, amount):
 
     if amount <= 0:
         return balance, "Invalid amount"
-    return balance + amount, "Deposit suscessful"
+    return balance + amount, "Deposit successful"
 
 
 def withdraw(balance, amount):
@@ -40,7 +40,7 @@ def withdraw(balance, amount):
         return balance, "Invalid amount"
     if amount > balance:
         return balance, "Insufficient funds"
-    return balance - amount, "Withdrawl successful"
+    return balance - amount, "withdraw successful"
 
 
 def transfer(balance, amount):
@@ -51,17 +51,12 @@ def transfer(balance, amount):
         return balance, "Insufficient funds"
     return balance - amount, "Transfer successful"
 
-def check(balance):
-
-    print(f"Current Balance: ", balance)
-
 # Exercise 3 -- Action Dispatcher
 
 ACTIONS = {
     "1": deposit,
     "2": withdraw,
     "3": transfer,
-    "4": check
 }
 
 balance = 45000
