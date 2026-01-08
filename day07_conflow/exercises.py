@@ -12,7 +12,10 @@ Description: I was practicing the core building blocks of Python logic! I have s
 
 # Exercise A -- Age Classifier (function)
 
-def classify_age(age):
+def classify_age():
+
+    age = int(input("Enter your age: "))
+
     if age < 18: 
         return "minor"
     elif age >= 18 and age < 65: 
@@ -20,17 +23,15 @@ def classify_age(age):
     else: 
         return "senior"
         
-print(classify_age(15))
-print(classify_age(30))
-print(classify_age(70))
+print(classify_age())
 
 
 # Exercise B -- Filter Numbers
 
-numbers = [3, 10, 21, 4, 18, 7, 65]
+numbers = [3, 10, 21, 4, 18, 7, 65, 16, 24, 80]
 
 for n in numbers:
-    if n > 10 and n % 2 == 0:
+    if n > 10 and n % 4 == 0:
         print(n)
 
 

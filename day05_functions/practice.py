@@ -2,34 +2,42 @@
 # Exercise A -- Simple Function
 
 def say_hello():
-    print("Hello, World")
+    message = "Hello, World"
+    return message
 
-say_hello()
+print(say_hello())
 
 
 # Exercise B -- Function with Parameters
 
-def square(number):
-    return number * number
+def square():
 
-print(square(4))
+    number = int(input("Enter number: "))
+    if number:
+        return number * number
+
+print(f"Result: {square()}")
 
 
 # Exercise C -- Function with Logic
 
-def is_adult(age):
-    if age > 18:
-        return "adult"
-    else:
-        return "minor"
-        
-print(is_adult(20))
+def is_adult():
 
+    age = int(input("Enter your age: "))
+
+    if age > 18:
+        return "You are an adult"
+    else:
+        return "You are a minor"
+    
+print(is_adult())
 
 # Exercise D -- Reuse
 
-def multiply(a, b):
-    return a * b
+def multiply():
 
-print(multiply(2, 3))
-print(multiply(5, 4))
+    first_number = int(input("Enter first number: "))
+    second_number = int(input("Enter second number: "))
+    return first_number * second_number
+
+print(f"Result: {multiply()}")
