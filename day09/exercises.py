@@ -40,7 +40,7 @@ def withdraw(balance, amount):
         return balance, "Invalid amount"
     if amount > balance:
         return balance, "Insufficient funds"
-    return balance - amount, "withdraw successful"
+    return balance - amount, "Withdraw successful"
 
 
 def transfer(balance, amount):
@@ -85,17 +85,10 @@ while True:
         print("Invalid option")
         continue
 
-    user_input = input("Enter amount: ")
-
-    try:
-
-        amount = int(user_input)
+    amount = get_positive_int("Enter amount: ")
         
-        action = ACTIONS[choice]
-        balance, message = action(balance, amount)
+    action = ACTIONS[choice]
+    balance, message = action(balance, amount)
 
-        print(message)
-        print("Current Balance: ", balance)
-
-    except ValueError:
-        print(f"Error: {user_input} is not a valid number")
+    print(message)
+    print("Current Balance: ", balance)
