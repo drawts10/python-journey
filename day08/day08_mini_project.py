@@ -106,3 +106,5 @@ def get_menu_options(balance):
 
 
 get_menu_options(balance)
+
+# This is more clear and consice in day 09

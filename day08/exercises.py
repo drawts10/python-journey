@@ -50,13 +50,45 @@ print(f"Your cart value is: {cart_value:.2f}")
 
 # Exercise 3 -- User Access Validator
 
-def verify_user(age, got_id):
 
-    if age < 18:
-        return "Underage"
-    if not got_id:
-        return "ID Required"
-    
-    return "Access granted"
+def get_positive_int(prompt):
+   
+    while True:
+        user_input = input(prompt)
+        try:
+            age = int(user_input)
+                
+            if age > 0:
+                return age
+            else:
+                print("Enter a positive number.")
 
-print(verify_user(25, True))
+        except ValueError:
+            print("Invalid input. User numbers only.")
+
+def verify_user():
+
+    while True: 
+        age = get_positive_int("Enter your age: ")
+
+        if age < 18:
+            print("Access Denied. Your are underage.")
+            return "Underage"
+        
+        got_id = input("Do you have an id? (yes/no): ").lower().strip()
+
+        if got_id == "no":
+            print("Access Denied. You need an ID")
+            continue
+
+        if got_id == "yes":
+            print("Access granted. You are verified")
+            return "Access granted"
+        
+        print("Invalid response. Please types 'yes' or 'no'.")
+        
+def main():
+    print(f"Final Status: {verify_user()}")
+
+if __name__ == "__main__":
+    main()

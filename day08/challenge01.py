@@ -20,5 +20,5 @@ for i in range(10, 20):
 fruits = ["Banana", "Cherry", "Orange"]
 
 for f in fruits:
-    if "Apple" not in fruits:
+    if "Apple" in fruits:
         print(True)

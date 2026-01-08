@@ -11,18 +11,36 @@ rest of the function can assume everything is okay.
 # 1 -- The "Password Validator" Challenge
 
 
-def validate_password(test_password = input("Enter your password: ")): 
+def validate_password(): 
+    while True:
+        test_password = input("Enter your password: ")
 
-    min_length = 8
+        min_length = 12
 
-    if len(test_password ) < min_length: # To check the size of the password
-        return "Too short"
-    if not any(char.isdigit() for char in test_password ): # Make sure password contains numbers
-        return "Needs a number"
-    if not any(c.isalpha() for c in test_password): # Make sure password contains letters
-        return "Needs letters"
-  
-    return "Password strong"
+        if len(test_password ) < min_length: # Check lengh
+            print("Too short")
+            continue
+        if not any(char.isdigit() for char in test_password ): # Check for numbers
+            print("Needs a number")
+            continue
+        if not any(c.isalpha() for c in test_password): # Check for letters
+            print("Needs letters")
+            continue
+        if not any(char.isupper() for char in test_password): # Check for uppecase letters
+            print("Uppercase character needed")
+            continue
+        if not any(char in "@#%&*-" for char in test_password):
+            print("Any character required")
+            continue
 
-result = validate_password(test_password = input("Enter your password: "))
-print(result)
+        print("Password strong")
+        return test_password
+        
+def main():
+    secure = validate_password()
+    print(f"Your password has been updated with: {secure}")
+
+if __name__ == "__main__":
+    main()
+
+# I added clear structure to the code as well as feature that I have learned ahead
