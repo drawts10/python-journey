@@ -8,7 +8,7 @@ def get_positive_int(prompt):
 
             number = int(user_input)
 
-            if number >= 0:
+            if number > 0:
                 return number
 
             else:
@@ -34,15 +34,15 @@ def multiply(a, b):
 
 def divide(a, b):
 
+    if b == 0:
+        return "Cannot divide by zero"
     return a / b
-
-
 
 ACTIONS = {
     1: add,
     2: subtract,
     3: multiply,
-    4: divide
+    4: divide,
 }
 
 def main():
@@ -57,17 +57,31 @@ def main():
         print("2. Subtract")
         print("3. Multiply")
         print("4. Divide")
+        print("5. Exit")
 
         choice = get_positive_int(("\nChoose operation: "))
+
+        if choice == 5:
+            print("Operation Finished, Goodbye!")
+            break
 
         if choice not in ACTIONS: 
             print("Option not available. Please try again!")
             continue
 
-        print()
-
         a_number = get_positive_int("Enter A number: ")
         b_number = get_positive_int("Enter B number: ")
+        
+        operation = ACTIONS[choice]
+        print(f"Total: {operation(a_number, b_number)}")
+
+if __name__ == "__main__":
+    main()
+
+
+    """
+
+    This is my if statement before using using the ACTIONS dictionary to get output and have better structure.
 
         if choice == 1:
             print(f"Total: {add(a_number, b_number)}")
@@ -84,7 +98,4 @@ def main():
         if choice == 4:
             print(f"Total: {divide(a_number, b_number)}")
             continue
-
-ZeroDivisionError
-if __name__ == "__main__":
-    main()
+    """

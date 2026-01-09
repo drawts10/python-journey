@@ -17,5 +17,10 @@ though it is taking too long, it is not officially finished but I need to take a
  SECOND MODIFICATION:
 
  - After all, I made it :), I was having an issue with the condition that print the "option not available", I fixed it by placing the condiction right after the choice variable that ask to user to choose an option within the calculator, it worked 100% well. 
+ - I added a ZeroDivisionError by making the loop in get_positive_int function ask for a number > 0. So now the program is not gonna crash if the user put a 0 as b number in divide function.
+ - I added a "Exit" buttom so the user may end the program.
+ - I am thinking about removing all those 4 printif statemets after a_number and b_number to make it better structurally using the ACTIONS dictionary. (I'm trying to figure out how to do it).
+- I could condense the if statements using ACTIONS dictionary, by mapping the intenger keys direcly to function objects, I have eliminated the repetitive conditions and made the main function significantly easier to read and maintain.
+- This code is pretty much better now, I'll update it later by learning more.
 
 """
