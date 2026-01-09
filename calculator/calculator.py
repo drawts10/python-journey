@@ -60,6 +60,10 @@ def main():
 
         choice = get_positive_int(("\nChoose operation: "))
 
+        if choice not in ACTIONS: 
+            print("Option not available. Please try again!")
+            continue
+
         print()
 
         a_number = get_positive_int("Enter A number: ")
@@ -81,10 +85,6 @@ def main():
             print(f"Total: {divide(a_number, b_number)}")
             continue
 
-        if choice not in ACTIONS: 
-            print("Option not available. Please try again!")
-            continue
-
-
+ZeroDivisionError
 if __name__ == "__main__":
     main()
