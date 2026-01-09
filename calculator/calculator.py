@@ -1,4 +1,4 @@
-def get_positive_int(prompt):
+def get_valid_int(prompt):
 
     while True:
 
@@ -6,13 +6,8 @@ def get_positive_int(prompt):
 
         try:
 
-            number = int(user_input)
-
-            if number > 0:
-                return number
-
-            else:
-                print("Enter a positive number.")
+            number = float(user_input)
+            return number
 
         except ValueError:
             print(f"Error: {user_input} is an invalid input. Please try again!")
@@ -34,8 +29,6 @@ def multiply(a, b):
 
 def divide(a, b):
 
-    if b == 0:
-        return "Cannot divide by zero"
     return a / b
 
 ACTIONS = {
@@ -49,8 +42,7 @@ def main():
 
     while True:
 
-        print()
-        print("CALCULATOR")
+        print("\n---CALCULATOR---")
 
         print("\nOperations Available")
         print("1. Add")
@@ -59,7 +51,7 @@ def main():
         print("4. Divide")
         print("5. Exit")
 
-        choice = get_positive_int(("\nChoose operation: "))
+        choice = get_valid_int(("\nChoose operation: "))
 
         if choice == 5:
             print("Operation Finished, Goodbye!")
@@ -69,8 +61,12 @@ def main():
             print("Option not available. Please try again!")
             continue
 
-        a_number = get_positive_int("Enter A number: ")
-        b_number = get_positive_int("Enter B number: ")
+        a_number = get_valid_int("Enter A number: ")
+        b_number = get_valid_int("Enter B number: ")
+
+        if choice == 4 and b_number == 0:
+            print("Cannot divide by zero")
+            continue
         
         operation = ACTIONS[choice]
         print(f"Total: {operation(a_number, b_number)}")

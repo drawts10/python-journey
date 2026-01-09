@@ -23,4 +23,12 @@ though it is taking too long, it is not officially finished but I need to take a
 - I could condense the if statements using ACTIONS dictionary, by mapping the intenger keys direcly to function objects, I have eliminated the repetitive conditions and made the main function significantly easier to read and maintain.
 - This code is pretty much better now, I'll update it later by learning more.
 
+THIRD MODIFICATION:
+
+- I updated the code to accept negative/positive numbers.
+- I changed the get_positive_int function to get_valid_int because I made the loop inside this function to accept either negative or positive numbers while performing any of the math operations available.
+- I added a loop which avoid the divide function to crash when a number is attempt to divide by 0.
+- I swapped float over int in order to accept decimals in operations.
+- Calculator fully working
+
 """
