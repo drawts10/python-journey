@@ -46,20 +46,21 @@ def main():
                 print("Operation Finished, Goodbye!")
                 break
 
-            if choice not in ACTIONS: 
+            if choice not in ACTIONS:
                 print("Option not available. Please try again!")
                 continue
 
             a_number = get_valid_int("Enter A number: ")
             b_number = get_valid_int("Enter B number: ")
 
-            if choice == 4 and b_number == 0:
-                print("Cannot divide by zero")
-                continue
-
         except ValueError:
             print("Please enter a number between 1 and 5.")
             continue
+        try:
+            result = divide(a, b)
+            print(result)
+        except ValueError as e:
+            print(e)
 
         operation = ACTIONS[choice]
         print(f"Total: {operation(a_number, b_number)}")
