@@ -7,6 +7,8 @@ Description: Here I'm gonna show relevant information of things I'm not gonna do
 
 Final version of the Calculator v2: This version is much more better, I have separated the Logic (the math), Input Validation (the helper function), and Control (the main loop). This is a great example of a "layered" architecture in a small script.
 
+Calculator v2 working 100% right with no possibility of erros by the user input. It took a few hours however we could get it done with some help, we have understood how things needs to be done in coding.
+
 """
 
 # Rule 1 -- NO FUNCTION TRUST THE CALLER

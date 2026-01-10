@@ -5,9 +5,10 @@ def add(a, b):return a + b
 def subtract(a, b):return a - b
 def multiply(a, b):return a * b
 def divide(a, b): 
-    if b == 0: raise ValueError("Division by zero")
+    if b == 0: 
+        raise ValueError("Division by zero not allowed")
     return a / b
-
+        
 ACTIONS = {
     1: add,
     2: subtract,
@@ -15,7 +16,7 @@ ACTIONS = {
     4: divide,
 }
 
-# Layer -- Input (stupid but safe)
+# Layer -- Input (safe)
 
 def get_valid_int(prompt):
     while True:
@@ -38,32 +39,25 @@ def main():
         print("4. Divide")
         print("5. Exit")
 
-    
-        try: 
-            choice = get_valid_int("\nChoose operation: ")
+        choice = get_valid_int("\nChoose operation: ")
 
-            if choice == 5:
-                print("Operation Finished, Goodbye!")
-                break
+        if choice == 5:
+            print("Operation Finished, Goodbye!")
+            break
 
-            if choice not in ACTIONS:
-                print("Option not available. Please try again!")
-                continue
-
-            a_number = get_valid_int("Enter A number: ")
-            b_number = get_valid_int("Enter B number: ")
-
-        except ValueError:
-            print("Please enter a number between 1 and 5.")
+        if choice not in ACTIONS:
+            print("Option not available. Please try again!")
             continue
-        try:
-            result = divide(a, b)
-            print(result)
-        except ValueError as e:
-            print(e)
+
+        a_number = get_valid_int("Enter A number: ")
+        b_number = get_valid_int("Enter B number: ")
 
         operation = ACTIONS[choice]
-        print(f"Total: {operation(a_number, b_number)}")
+
+        try: 
+            print(f"Total: {operation(a_number, b_number)}")
+        except ValueError as e:
+            print(e)
 
 if __name__ == "__main__":
     main()
