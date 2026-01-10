@@ -16,16 +16,16 @@ ACTIONS = {
     4: divide,
 }
 
-# Layer -- Input (safe)
+# Layer -- Input (safe, defensive)
 
 def get_valid_int(prompt):
     while True:
         try:
             return int(input(prompt))
         except ValueError:
-            print("Invalid intenger")
+            print("Invalid integer")
 
-# Layer 3 -- Control(the boss)
+# Layer 3 -- Control(error handling)
 def main():
 
     while True:
