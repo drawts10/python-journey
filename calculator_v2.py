@@ -1,51 +1,75 @@
-
-# input layer
-
 def get_valid_int(prompt):
-    user_input = input(prompt)
-    number = float(user_input)
-    return number
 
-# logic layer
+    while True:
 
-def add(a, b): return a + b
+        user_input = input(prompt)
 
-def subtract(a, b): return a - b
+        try:
 
-def multiply(a, b): return a * b
+            number = float(user_input)
+            return number
 
-def divide(a, b): return a / b
+        except ValueError:
+            print(f"Error: {user_input} is an invalid input. Please try again!")
+
+def add(a, b):
+
+    return a + b
 
 
-# Dispatcher
-ACTIONS = {1: add, 2: subtract, 3: multiply, 4:divide,}
-choice = ACTIONS
+def subtract(a, b):
 
-# Error handling
+    return a - b
+
+
+def multiply(a, b):
+
+    return a * b
+
+
+def divide(a, b):
+
+    return a / b
+
+ACTIONS = {
+    1: add,
+    2: subtract,
+    3: multiply,
+    4: divide,
+}
 
 def main():
-    while True:
-        print("---CALCULATOR---")
 
-        print("\n1. Add")
+    while True:
+
+        print("\n---CALCULATOR---")
+
+        print("\nOperations Available")
+        print("1. Add")
         print("2. Subtract")
         print("3. Multiply")
         print("4. Divide")
         print("5. Exit")
 
-        print(f"{get_valid_int("Choose an Operation: ")}")
+        choice = get_valid_int(("\nChoose operation: "))
 
-        try:
-          if exit:
-              break
-          if b in 4 == 0:
-              raise ValueError("Divide by zero not allowed")
+        if choice == 5:
+            print("Operation Finished, Goodbye!")
+            break
 
-        except ValueError:
-            print(f"{get_valid_int} not a valid input. Please try again!")
+        if choice not in ACTIONS: 
+            print("Option not available. Please try again!")
+            continue
 
-operation = ACTIONS
-print(f"Total: {get_valid_int}")
+        a_number = get_valid_int("Enter A number: ")
+        b_number = get_valid_int("Enter B number: ")
+
+        if choice == 4 and b_number == 0:
+            print("Cannot divide by zero")
+            continue
+        
+        operation = ACTIONS[choice]
+        print(f"Total: {operation(a_number, b_number)}")
 
 if __name__ == "__main__":
     main()
