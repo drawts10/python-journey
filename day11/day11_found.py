@@ -5,6 +5,8 @@ Author: Drawts
 
 Description: Here I'm gonna show relevant information of things I'm not gonna do no more, in order to improve performance on writing working scripts, there are some rules I need to implement for me to get to levelup my programming skills with python:
 
+Final version of the Calculator v2: This version is much more better, I have separated the Logic (the math), Input Validation (the helper function), and Control (the main loop). This is a great example of a "layered" architecture in a small script.
+
 """
 
 # Rule 1 -- NO FUNCTION TRUST THE CALLER
