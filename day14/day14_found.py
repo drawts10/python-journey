@@ -1,5 +1,5 @@
 """
-Day 14: 
+Day 14: Error Models: Result vs Exceptions
 
 Author: Drawts
 
