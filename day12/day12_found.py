@@ -5,6 +5,11 @@ Author: Drawts
 
 Description: For this day we're making the code callable, testable and reusable. Applying contracts, engine/interface boundaries, as well as the separatin of concerns.
 
+***Key Strenght***
+
+Engine rule: never trust callers. Validate inputs. Always return a valid response.
+Controller rule: Never proceed with invalid state. Guard the flow early.
+
 """
 
 # Day 12 Goal
