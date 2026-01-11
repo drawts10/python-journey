@@ -4,6 +4,7 @@ Day 13: Decoupling Control From Features (Open/Closed Principle)
 Author: Drawts
 
 Description: This is about removing menus entirely and making the system, extensible without touching control flow.
+All that we have done today, is explained below.
 
 """
 
