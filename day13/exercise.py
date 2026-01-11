@@ -8,7 +8,7 @@ def divide(a, b):
     if b == 0: 
         return False, None, "Division by zero not allowed"
     return True, a / b, None
-def power(a, b): return True, a ^ b, None
+def power(a, b): return True, a ** b, None
 def modulo(a, b): return True, a % b, None
         
 ACTIONS = {
