@@ -33,3 +33,19 @@ application flow.
 | Financial / critical | Result or hybrid |
 
 """
+
+# Step 1 -- Define a Result type (logic-level only)
+"""
+* For this part we're gonna add a "class Result" with a __init__() in order to add a data contract to the code, this is the part call #Extra layer.
+"""
+
+# Step 2 -- Define error types (not strings)
+"""
+* This is for define the commom errors that we might get while running the code.
+"""
+
+# Step 3 -- Update logic layer (strict, silent)
+"""
+* For this part we're modifying the logic or math part to better get along with the actions performed before in order to fully complete the changes of the model we're introducing to the code right now.
+"""
+

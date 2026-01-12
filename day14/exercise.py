@@ -1,15 +1,15 @@
 
 # Layer 1 -- Logic(dumb, strict, silent)
 
-def add(a, b):return True, a + b, None
-def subtract(a, b):return True, a - b, None
-def multiply(a, b):return True, a * b, None
+def add(a, b):return True, (a + b)
+def subtract(a, b):return True, (a - b)
+def multiply(a, b):return True, (a * b)
 def divide(a, b): 
     if b == 0: 
-        return False, None, "Division by zero not allowed"
-    return True, a / b, None
-def power(a, b): return True, a ** b, None
-def modulo(a, b): return True, a % b, None
+        return Result(False, error=DIVISION_BY_ZERO)
+    return True, (a / b)
+def power(a, b): return True, (a ** b)
+def modulo(a, b): return True, (a % b)
         
 ACTIONS = {
     1: ("Add", add),
@@ -38,6 +38,17 @@ def calculate(choice, a, b):
     
     _, operation = ACTIONS[choice]
     return operation(a, b)
+
+# Extra layer
+
+class Result:
+    def __init__(self, ok, value=None, error=None):
+        self.ok = ok
+        self.value = value
+        self.error = error
+
+DIVISION_BY_ZERO = "DIVISION_BY_ZERO"
+INVALID_OPERATION = "INVALID_OPERATION"
 
 # Layer 3 -- Control(error handling)
 def main():
