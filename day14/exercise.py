@@ -1,15 +1,15 @@
 
 # Layer 1 -- Logic(dumb, strict, silent)
 
-def add(a, b):return True, (a + b)
-def subtract(a, b):return True, (a - b)
-def multiply(a, b):return True, (a * b)
+def add(a, b):return Result(True, a + b)
+def subtract(a, b):return Result(True, a - b)
+def multiply(a, b):return Result(True, a * b)
 def divide(a, b): 
     if b == 0: 
         return Result(False, error=DIVISION_BY_ZERO)
-    return True, (a / b)
-def power(a, b): return True, (a ** b)
-def modulo(a, b): return True, (a % b)
+    return Result(True, a / b)
+def power(a, b): return Result(True, a ** b)
+def modulo(a, b): return Result(True, a % b)
         
 ACTIONS = {
     1: ("Add", add),
@@ -36,8 +36,7 @@ def calculate(choice, a, b):
     if choice not in ACTIONS:
         return Result(False, error=INVALID_OPERATION)
     
-    _, operation = ACTIONS[choice]
-    return operation(a, b)
+    return ACTIONS[choice](a, b)
 
 # Extra layer
 
@@ -76,17 +75,25 @@ def main():
         a_number = get_valid_int("Enter A number: ")
         b_number = get_valid_int("Enter B number: ")
 
-        result = calculate(choice, a_number, b_number)
+        success, result, error = calculate(choice, a_number, b_number)
 
-        if result.ok:
-            print(f"Total: {result.value}")
+        if success:
+            print(f"Total: {result}")
         else: 
-            if result.error == DIVISION_BY_ZERO:
-                print("Error: Division by zero not allowe")
-            elif result.error == INVALID_OPERATION:
-                print("Error: Invalid Operation")
-            else:
-                print("Error: Unknown error")
+            print(f"Error: {error}")
        
 if __name__ == "__main__":
     main()
+
+    """
+    if result.ok:
+        print(f"Total: {result.value}")
+    else:
+        if result.error == DIVISION_BY_ZERO:
+            print("Division by zero not allowed")
+        elif result.error == INVALID_OPERATION:
+            print("Error: Invalid Operation")
+        else:
+            print("Error: Unknown error")
+    
+    """
