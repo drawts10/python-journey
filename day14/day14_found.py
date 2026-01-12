@@ -1,6 +1,8 @@
 """
 Day 14: Error Model: Result vs Exceptions.
 
+Author: Drawts
+
 Error Handling Philosophy: Result Objects vs. Exceptions
 
 This module explores the two primary ways to handle failures:
@@ -57,4 +59,20 @@ application flow.
 # Part 5 -- Control layter interprets meaning 
 """
 * Here we remove the success, result, error variables to execute the calculate() on the main() and updating with the new optin used which is Result and its exceptions.
+"""
+
+
+# Few questions
+"""
+* What broke today?
+
+I broke the exceptions and returns from the logic code which is success, result and error. By braking that, I had to update the calculate and main(). Had to create a class along with a __init__() for the new exception and result I was supposed to use for this day.
+
+* What rule did I learn?
+
+For we to use the Result Objects, we always have to follow the instructions from the class result, applying the rules on the logic of your code, as well update the outputs or main() of your code to do what the class ask it to do.
+
+* What would past-me have done wrong here?
+
+I violated the contract from the class result by not adding the name of the class which was result at the beginning of each return on the math logic of the code.
 """
