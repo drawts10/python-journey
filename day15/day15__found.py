@@ -8,3 +8,22 @@ Description: This day is about make errors imposible to mistype, to show how rea
 We will add "Enums", touch only the logic layer and leave the main() completely untouched.
 
 """
+
+
+# Question for layers worked: Why this layer is not allowed to do more? 
+
+# Few Questions 
+"""
+* What broke today?
+
+
+
+* What rule did I learn?
+
+
+
+* What would past-me have done wrong here?
+
+
+
+"""
