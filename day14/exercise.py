@@ -34,7 +34,7 @@ def get_valid_int(prompt):
 
 def calculate(choice, a, b):
     if choice not in ACTIONS:
-        return False, None, "Invalid operation"
+        return Result(False, error=INVALID_OPERATION)
     
     _, operation = ACTIONS[choice]
     return operation(a, b)
@@ -76,12 +76,17 @@ def main():
         a_number = get_valid_int("Enter A number: ")
         b_number = get_valid_int("Enter B number: ")
 
-        success, result, error = calculate(choice, a_number, b_number)
+        result = calculate(choice, a_number, b_number)
 
-        if success:
-            print(f"Total: {result}")
+        if result.ok:
+            print(f"Total: {result.value}")
         else: 
-            print(f"Error: {error}")
+            if result.error == DIVISION_BY_ZERO:
+                print("Error: Division by zero not allowe")
+            elif result.error == INVALID_OPERATION:
+                print("Error: Invalid Operation")
+            else:
+                print("Error: Unknown error")
        
 if __name__ == "__main__":
     main()

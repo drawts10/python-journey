@@ -49,3 +49,12 @@ application flow.
 * For this part we're modifying the logic or math part to better get along with the actions performed before in order to fully complete the changes of the model we're introducing to the code right now.
 """
 
+# Steo 4 -- Engine stays dumb but safe
+"""
+* Aplying the new error types defined for the calculate() and updating the return part.
+"""
+
+# Part 5 -- Control layter interprets meaning 
+"""
+* Here we remove the success, result, error variables to execute the calculate() on the main() and updating with the new optin used which is Result and its exceptions.
+"""
