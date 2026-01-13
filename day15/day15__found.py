@@ -5,7 +5,9 @@ Author: Drawts
 
 Description: This day is about make errors imposible to mistype, to show how real API's communicate failure and why strings like "DIVISION_BY_ZERO" are so fragile.
 
-We will add "Enums", touch only the logic layer and leave the main() completely untouched.
+We will add "Enums", touch only the logic layer and leave the main() completely untouched. Make invalid states impossible by construction.
+
+Key value: "A result must represent exactly ONE truth. Never two. Never zero."
 
 """
 
