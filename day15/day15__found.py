@@ -1,5 +1,5 @@
 """
-Day 15: Making Errors Impossible
+Day 15: Making Errors Impossible to imuse (Enums + Result discipline)
 
 Author: Drawts
 
