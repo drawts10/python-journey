@@ -41,14 +41,7 @@ def calculate(choice, a, b):
 
 # Extra layer
 
-class Result:
-    def __init__(self, ok, value=None, error=None):
-        self.ok = ok
-        self.value = value
-        self.error = error
 
-DIVISION_BY_ZERO = "DIVISION_BY_ZERO"
-INVALID_OPERATION = "INVALID_OPERATION"
 
 # Layer 3 -- Control(error handling)
 def main():
